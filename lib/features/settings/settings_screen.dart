@@ -61,6 +61,17 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 6),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 6),
+                child: Text(
+                  s.sessionLimitHint,
+                  style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        fontSize: 9.5,
+                        height: 1.35,
+                      ),
+                ),
+              ),
               const SizedBox(height: 12),
               _SettingsGroup(
                 children: [

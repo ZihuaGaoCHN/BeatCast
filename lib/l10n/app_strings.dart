@@ -63,7 +63,7 @@ class AppStrings {
   String get broadcastSection => isZh ? '广播' : 'BROADCAST';
   String get aboutSection => isZh ? '关于' : 'ABOUT';
   String get autoStopTitle => isZh ? '空闲自动停止' : 'Auto-stop when idle';
-  String get autoStopShort => isZh ? '自动停止' : 'Auto-stop';
+  String get autoStopShort => isZh ? '无设备时停止' : 'Stop when idle';
   String get autoStopSubtitle =>
       isZh ? '空闲时自动省电。' : 'Save power when idle.';
   String autoStopLabel(int minutes) {
@@ -71,7 +71,10 @@ class AppStrings {
     return isZh ? '$minutes 分钟' : '$minutes min';
   }
 
-  String get sessionTitle => isZh ? '最长广播时长' : 'Session limit';
+  String get sessionTitle => isZh ? '总时长上限' : 'Max duration';
+  String get sessionLimitHint => isZh
+      ? '「无设备时停止」在最后一个设备断开后开始计时；「总时长上限」从开始广播起计时，到时强制停止。'
+      : '“Stop when idle” starts after the last device disconnects; “Max duration” counts from broadcast start and stops at the limit.';
   String get sessionShort => isZh ? '最长时长' : 'Session limit';
   String get sessionSubtitle =>
       isZh ? '到时自动停止。' : 'Auto-stop after the limit.';

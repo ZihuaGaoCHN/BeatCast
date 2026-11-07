@@ -43,8 +43,8 @@ void main() {
     await tester.tap(find.byTooltip('Settings'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Auto-stop'), findsOneWidget);
-    await tester.tap(find.text('Auto-stop'));
+    expect(find.text('Stop when idle'), findsOneWidget);
+    await tester.tap(find.text('Stop when idle'));
     await tester.pumpAndSettle();
 
     await tester.scrollUntilVisible(find.text('30 min'), 80);
@@ -95,9 +95,9 @@ void main() {
     expect(find.text('Start broadcast'), findsOneWidget);
     await tester.tap(find.byTooltip('Settings'));
     await tester.pumpAndSettle();
-    expect(find.text('Auto-stop'), findsOneWidget);
+    expect(find.text('Stop when idle'), findsOneWidget);
 
-    await tester.tap(find.text('Auto-stop'));
+    await tester.tap(find.text('Stop when idle'));
     await tester.pumpAndSettle();
     expect(find.text('30 min'), findsOneWidget);
     expect(tester.takeException(), isNull);
