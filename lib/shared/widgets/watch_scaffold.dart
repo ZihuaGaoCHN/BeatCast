@@ -46,59 +46,6 @@ class WatchScaffold extends StatelessWidget {
   }
 }
 
-class PageHeader extends StatelessWidget {
-  const PageHeader({
-    super.key,
-    required this.title,
-    this.trailing,
-    this.onBack,
-  });
-
-  final String title;
-  final Widget? trailing;
-  final VoidCallback? onBack;
-
-  @override
-  Widget build(BuildContext context) {
-    final text = Theme.of(context).textTheme;
-    final shortestSide = MediaQuery.sizeOf(context).shortestSide;
-    final compact = shortestSide < 300;
-    return Center(
-      child: SizedBox(
-        width: shortestSide * (compact ? 0.66 : 0.58),
-        height: compact ? 34 : 44,
-        child: Row(
-          children: [
-            IconButton(
-              tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-              onPressed: onBack ?? () => Navigator.of(context).maybePop(),
-              icon: Icon(Icons.arrow_back_rounded, size: compact ? 18 : 20),
-              style: compact
-                  ? IconButton.styleFrom(
-                      minimumSize: const Size(30, 30),
-                      maximumSize: const Size(30, 30),
-                      padding: const EdgeInsets.all(4),
-                    )
-                  : null,
-            ),
-            SizedBox(width: compact ? 4 : 8),
-            Expanded(
-              child: Text(
-                title,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: compact
-                    ? text.titleLarge?.copyWith(fontSize: 15)
-                    : text.titleLarge,
-              ),
-            ),
-            ?trailing,
-          ],
-        ),
-      ),
-    );
-  }
-}
 
 class SectionLabel extends StatelessWidget {
   const SectionLabel(this.label, {super.key});

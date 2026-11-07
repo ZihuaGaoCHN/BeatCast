@@ -54,43 +54,9 @@ class AppStrings {
   String get watchNameFallback => isZh ? 'Wear OS 手表' : 'Wear OS watch';
 
   String get permissionsTitle => isZh ? '权限' : 'Permissions';
-  String get permissionsIntro => isZh
-      ? '授予以下权限即可开始广播。'
-      : 'Grant access to start broadcasting.';
-  String get sensorTitle => isZh ? '心率传感器' : 'Heart-rate sensor';
-  String get sensorBody =>
-      isZh ? '读取手表的光学心率。' : 'Reads your watch’s pulse sensor.';
-  String get bluetoothTitle => isZh ? '蓝牙广播' : 'Bluetooth LE';
-  String get bluetoothBody => isZh
-      ? '以标准心率带身份广播。'
-      : 'Advertises as a heart-rate strap.';
-  String get backgroundTitle => isZh ? '后台传感器' : 'Background sensor';
-  String get backgroundBody => isZh
-      ? '设为“始终”以支持熄屏。'
-      : 'Allow all the time for screen-off.';
-  String get notificationsTitle => isZh ? '常驻通知' : 'Ongoing notification';
-  String get notificationsBody =>
-      isZh ? '显示状态和停止按钮。' : 'Shows status and stop control.';
-  String get grantAccess => isZh ? '授予权限' : 'Grant access';
-  String get allowBackground => isZh ? '允许“始终”' : 'Allow all the time';
-  String get permissionsReady => isZh ? '权限已就绪' : 'All permissions ready';
-  String get permissionsMissing =>
-      isZh ? '还有权限未授予。' : 'Some permissions are still missing.';
-  String get backgroundPermissionHint => isZh
-      ? '在系统设置中，把“传感器”权限改为“始终允许”。'
-      : 'In system settings, set Sensors to “Allow all the time”.';
-  String get permissionGranted => isZh ? '已允许' : 'Granted';
-  String get permissionNeeded => isZh ? '需要授权' : 'Needed';
-  String get permissionRecommended => isZh ? '建议允许' : 'Recommended';
-  String get permissionSettingsRequired => isZh ? '需要在设置中开启' : 'Enable in settings';
-  String get startAnyway => isZh ? '仍然开始' : 'Start anyway';
   String get bluetoothOff => isZh ? '蓝牙已关闭。' : 'Bluetooth is off.';
   String get bluetoothOffHint =>
       isZh ? '打开蓝牙后即可开始广播。' : 'Turn it on to start broadcasting.';
-  String get continueLabel => isZh ? '继续' : 'Continue';
-  String get closeSettingsHint => isZh
-      ? '授权后返回 BeatCast，状态会自动刷新。'
-      : 'Return to BeatCast after granting access; status refreshes automatically.';
 
   String get settingsTitle => isZh ? '设置' : 'Settings';
   String get powerSection => isZh ? '功耗' : 'POWER';

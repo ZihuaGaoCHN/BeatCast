@@ -22,7 +22,7 @@ BeatCast 是一个独立的 Wear OS 应用（包名 `com.zihuagaochn.beatcast`�
   - 屏幕熄灭后 Flutter 不产生帧；界面只保留必要动画。
 - **Material 3 Expressive**：针对方圆表盘重新排版的大号 BPM、分层表盘环、弹性按压反馈、语义化色彩和弹性转场。
 - **中文 / English** 双语界面，跟随系统语言。
-- **权限引导**：首次启动自动拉起系统权限对话框，后续可在应用内权限页补充设置；覆盖 Android 12–16 的蓝牙、通知、传感器及后台传感器权限差异，包括 API 36 的 `android.permission.health.READ_HEART_RATE` 迁移。
+- **权限申请**：首次启动自动拉起系统权限对话框；未授权时首页按钮会再次请求，失败后可直接跳转应用设置。覆盖 Android 12–16 的蓝牙、通知、传感器及后台传感器权限差异，包括 API 36 的 `android.permission.health.READ_HEART_RATE` 迁移。
 - **系统默认字体**：使用系统 `sans-serif`，中文字形走系统 Noto fallback；BPM 数字取消负字距，避免相邻数字粘连。
 - **低重绘**：移除每秒计时刷新与 BPM 切换动画，减少低功耗手表上的掉帧。
 - **无第三方 Flutter 依赖**：除 Flutter SDK 与 `flutter_localizations` 外没有运行时插件，减小安装包与启动开销。
@@ -35,9 +35,9 @@ BeatCast 是一个独立的 Wear OS 应用（包名 `com.zihuagaochn.beatcast`�
 | --- | --- |
 | ![首页](screenshots/home_noto.png) | ![广播中](screenshots/broadcasting.png) |
 
-| 权限引导 | 设置 |
+| 设置 | 应用图标 |
 | --- | --- |
-| ![权限](screenshots/permissions.png) | ![设置](screenshots/settings_noto.png) |
+| ![设置](screenshots/settings_noto.png) | ![应用图标](screenshots/app_icon_material_solid_up.png) |
 
 ## 使用
 
@@ -145,7 +145,7 @@ cd android && ./gradlew testDebugUnitTest
 已覆盖：
 - 状态/权限/设置解析；
 - 启动、权限申请、蓝牙关闭、后台权限失败等控制器路径；
-- 首页、权限引导、设置页的 Widget 流程；
+- 首页、设置页和权限请求流程的 Widget 测试；
 - 227 dp 圆表布局（454 px @ 2x）；
 - BLE Heart Rate Measurement 字节编码。
 
@@ -158,7 +158,7 @@ cd android && ./gradlew testDebugUnitTest
 ```
 lib/
   core/            models / platform channel / state controller / theme
-  features/        home / permissions / settings
+  features/        home / settings
   l10n/            中英文字符串
   shared/          watch scaffold, ring, button, badge
 android/app/src/main/kotlin/com/zihuagaochn/beatcast/

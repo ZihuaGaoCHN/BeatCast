@@ -12,7 +12,6 @@ import '../../shared/widgets/beat_button.dart';
 import '../../shared/widgets/beat_ring.dart';
 import '../../shared/widgets/live_badge.dart';
 import '../../shared/widgets/watch_scaffold.dart';
-import '../permissions/permissions_screen.dart';
 import '../settings/settings_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -125,14 +124,6 @@ class _HomeBody extends StatelessWidget {
     HapticFeedback.selectionClick();
     if (controller.isRunning) {
       await controller.stop();
-      return;
-    }
-    if (!controller.permissions.ready) {
-      await Navigator.of(context).push<bool>(
-        MaterialPageRoute(
-          builder: (_) => PermissionsScreen(controller: controller),
-        ),
-      );
       return;
     }
     await controller.start();

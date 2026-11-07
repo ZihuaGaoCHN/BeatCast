@@ -74,14 +74,8 @@ void main() {
     await tester.tap(find.text('Set up & start'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Permissions'), findsOneWidget);
-    await tester.tap(find.text('Grant access'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Start broadcast'), findsOneWidget);
-    await tester.tap(find.text('Start broadcast'));
-    await tester.pumpAndSettle();
-
+    expect(gateway.coreRequests, 1);
+    expect(gateway.backgroundRequests, 1);
     expect(gateway.startCalls, 1);
     expect(find.text('Stop broadcast'), findsOneWidget);
   });
