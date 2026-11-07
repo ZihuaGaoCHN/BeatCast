@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BeatCast</string>
+    <string name="notification_channel_name">心率广播</string>
+    <string name="notification_channel_description">BeatCast 广播期间显示状态</string>
+    <string name="notification_title">BeatCast</string>
+    <string name="notification_waiting">等待设备连接</string>
+    <string name="notification_connected">已连接 %1$d 台设备</string>
+    <string name="notification_live">%1$d BPM · 已连接 %2$d 台</string>
+    <string name="notification_attention">需要处理 · 打开 BeatCast</string>
+    <string name="notification_stop">停止</string>
+</resources>

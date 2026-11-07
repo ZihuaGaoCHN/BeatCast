@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- The whole mark is scaled down and optically shifted down slightly. -->
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.86"
+        android:scaleY="0.86"
+        android:translateY="1.55">
+
+        <!-- Favorite (filled) from Material Symbols, Apache-2.0. -->
+        <group
+            android:translateX="16.8"
+            android:translateY="17.34"
+            android:scaleX="3.1"
+            android:scaleY="3.1">
+            <path
+                android:fillColor="#FF6B5E"
+                android:pathData="M12,21l-1.45-1.3q-2.53-2.27-4.18-3.92q-1.65-1.65-2.63-2.96Q2.78,11.5 2.39,10.4T2,8.15Q2,5.8 3.58,4.22T7.5,2.65q1.3,0 2.48,0.55T12,4.75q0.85-1 2.03-1.55T16.5,2.65q2.35,0 3.93,1.57T22,8.15q0,1.15-0.39,2.25t-1.36,2.41q-0.97,1.31-2.63,2.96q-1.65,1.65-4.17,3.92L12,21Z" />
+        </group>
+
+        <!-- Link from Material Symbols, Apache-2.0. -->
+        <group
+            android:translateX="36.6"
+            android:translateY="35.1"
+            android:scaleX="1.45"
+            android:scaleY="1.45">
+            <path
+                android:fillColor="#08090B"
+                android:pathData="M11,17H7q-2.07,0-3.54-1.46T2,12Q2,9.92 3.46,8.46T7,7h4V9H7Q5.75,9 4.88,9.88T4,12t0.88,2.13T7,15h4v2ZM8,13V11h8v2H8Zm5,4V15h4q1.25,0 2.13-0.88T20,12T19.13,9.88T17,9H13V7h4q2.07,0 3.54,1.46T22,12t-1.46,3.54T17,17H13Z" />
+        </group>
+    </group>
+</vector>
