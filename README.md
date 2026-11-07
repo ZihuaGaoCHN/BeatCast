@@ -27,18 +27,6 @@ BeatCast 是一个独立的 Wear OS 应用（包名 `com.zihuagaochn.beatcast`�
 - **低重绘**：移除每秒计时刷新与 BPM 切换动画，减少低功耗手表上的掉帧。
 - **无第三方 Flutter 依赖**：除 Flutter SDK 与 `flutter_localizations` 外没有运行时插件，减小安装包与启动开销。
 
-## 截图
-
-> 以下截图来自 Wear OS 5 模拟器（454 × 454，227 dp）。模拟器没有 PPG 与真实 BLE 接收端，因此展示的是空闲、等待配对和权限流程；真实手表上会显示实时 BPM 与连接设备数量。
-
-| 首页 | 广播中 |
-| --- | --- |
-| ![首页](screenshots/home_noto.png) | ![广播中](screenshots/broadcasting.png) |
-
-| 设置 | 应用图标 |
-| --- | --- |
-| ![设置](screenshots/settings_noto.png) | ![应用图标](screenshots/app_icon_material_solid_up.png) |
-
 ## 使用
 
 1. 在手表上安装并打开 BeatCast。
