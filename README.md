@@ -6,7 +6,7 @@
 
 把手表变成一条标准蓝牙心率带。
 
-BeatCast 是一个独立的 Wear OS 应用（包名 `com.zihuagaochn.beatcast`），用 Flutter 构建，面向 **不支持心率广播** 的手表（例如 Samsung Galaxy Watch 系列）。它读取手表的光学心率传感器，通过 BLE 外设模式广播 Bluetooth SIG 标准 **Heart Rate Service (0x180D)**，让跑步机、动感单车、码表、健身 App 像连接普通心率带一样连接手表。
+BeatCast 是一个独立的 Wear OS 应用，用 Flutter 构建，面向 **不支持心率广播** 的手表（例如 Samsung Galaxy Watch 系列）。它读取手表的光学心率传感器，通过 BLE 外设模式广播 Bluetooth SIG 标准 **Heart Rate Service (0x180D)**，让跑步机、动感单车、码表、健身 App 像连接普通心率带一样连接手表。
 
 > 无需手机中转，心率数据不离开手表与健身设备之间的蓝牙链路。
 
